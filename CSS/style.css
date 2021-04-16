@@ -1,5 +1,9 @@
+@font-face {
+  font-family: 'Raleway';
+  src: local('/FONTS/Raleway-Bold.ttf') format('ttf');
+}
+
 * {
-  font-family: 'Raleway', sans-serif;
   outline: none;
   scroll-behavior: smooth;
 }
@@ -23,10 +27,6 @@ li {
 }
 
 .container {
-  overflow: hidden;
-}
-
-.container {
   width: 80%;
   margin: auto;
   max-width: 1600px;
@@ -44,12 +44,12 @@ li {
 }
 
 .logo {
-  width: 35%;
-  margin-left: 20px;
+  transform: scale(1.2);
+  margin-left: 35px;
 }
 
 .links-container {
-  transform: translateX(-150px);
+  transform: translateX(-170px);
   display: flex;
   justify-content: center;
 }
@@ -64,11 +64,18 @@ li {
 
 .inscription {
   position: absolute;
-  right: 12%;
-  top: 51px;
+  right: 10%;
+  top: 10px;
   color: var(--blue);
   cursor: pointer;
   font-weight: bolder;
+  padding: 40px;
+}
+
+.link:hover,
+.inscription:hover {
+  border-top: 2px solid var(--blue);
+  top: 8px;
 }
 
 /****************MAIN**********/
@@ -78,13 +85,24 @@ li {
 }
 .search-bar {
   display: flex;
-  height: 55px;
+  height: 50px;
 }
 
 .search-title {
   font-weight: bold;
   font-size: 26px;
 }
+
+.submit-text {
+  display: flex;
+  justify-self: center;
+  text-align: center;
+}
+
+.submit-icon {
+  display: none;
+}
+
 .search-subtitle {
   color: grey;
   font-weight: bold;
@@ -98,7 +116,7 @@ li {
   background: var(--grey);
   justify-content: center;
   border-radius: 15px 0 0 15px;
-  width: 50px;
+  width: 60px;
   align-items: center;
   cursor: pointer;
   font-size: 19px;
@@ -106,11 +124,11 @@ li {
 
 #search-input {
   border: 1px solid var(--grey);
-  text-align: center;
   width: 270px;
   font-size: 18px;
   font-weight: bold;
   color: black;
+  text-align: center;
 }
 
 .search-btn {
@@ -163,7 +181,7 @@ li {
   border: 2px solid rgba(51, 51, 51, 0.171);
   border-radius: 0 26px 26px 0;
   border-left: transparent;
-  padding: 13px 22px 13px 37px;
+  padding: 13px 20px 13px 34px;
   cursor: pointer;
 }
 
@@ -346,7 +364,6 @@ h5 {
   width: 55%;
   padding: 10px;
   padding-left: 20px;
-  font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -467,6 +484,7 @@ footer {
   margin-top: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
+  display: flex;
 }
 
 .foot-container {
@@ -491,4 +509,392 @@ footer p {
   padding-top: 15px;
   font-weight: bold;
   color: rgb(73, 73, 73);
+}
+
+/*********************RESPONSIVE**************/
+@media screen and (max-width: 1600px) {
+  .container {
+    width: 90%;
+  }
+  .inscription {
+    right: 4%;
+  }
+}
+@media screen and (max-width: 1423px) {
+  .container {
+    width: 100%;
+  }
+  .inscription {
+    right: 0.5%;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .hebergements-container {
+    flex-direction: column;
+  }
+  .heber-right,
+  .heber-left {
+    width: 100%;
+  }
+
+  .heber-right-card {
+    width: 30%;
+  }
+
+  .heber-left {
+    order: 2;
+    margin-top: 40px;
+  }
+  .heber-right-cards-container {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fifil {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .filter {
+    padding-bottom: 30px;
+  }
+
+  .heber-right-card {
+    width: 32%;
+  }
+
+  .hrc-img-container {
+    width: 50%;
+  }
+
+  .hrc-body {
+    font-size: 14px;
+  }
+
+  .hrc-body h5 {
+    font-size: 16px;
+  }
+
+  .hrc-card-body-info {
+    transform: translateY(-10px);
+  }
+
+  .hrc-stars-container {
+    font-size: 14px;
+  }
+
+  /*******************ACTIVITES********************/
+
+  .activites-col-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 22px;
+    height: auto;
+  }
+
+  .left-col,
+  .right-col {
+    display: flex;
+    width: 100%;
+  }
+
+  .activite-title {
+    margin-top: 60px;
+    font-size: 22px;
+  }
+
+  .aic-odd {
+    width: 80%;
+  }
+
+  footer {
+    padding-bottom: 0;
+  }
+  .footer-col {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  /*********HEADER************/
+
+  .container {
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    /* justify-content: start; */
+    /* overflow-x: hidden; */
+  }
+
+  .logo {
+    position: relative;
+    top: -16px;
+    margin-left: 20px;
+    transform: scale(1.1);
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: center;
+    transform: translateX(0);
+    width: 100%;
+    /* margin-top: 10px; */
+  }
+  .link {
+    padding: 50px;
+    padding-bottom: 15px;
+    width: 50%;
+  }
+
+  .hebergement {
+    border: transparent;
+    border-bottom: 3px solid var(--blue);
+    color: rgb(11, 90, 236);
+    padding-left: 30px;
+  }
+
+  .activites {
+    border-bottom: 3px solid rgba(128, 128, 128, 0.329);
+  }
+
+  .inscription {
+    right: 6%;
+    top: 50px;
+    padding: 0;
+  }
+
+  .link:hover,
+  .inscription:hover {
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--blue);
+    border-top: 0px solid transparent;
+  }
+
+  /****************MAIN**********/
+
+  .search-container {
+    padding-top: 20px;
+    margin: 20px;
+  }
+  .search-bar {
+    display: flex;
+  }
+
+  .submit-text {
+    display: none;
+  }
+
+  .submit-icon {
+    display: flex;
+  }
+
+  .search-btn {
+    border-radius: 15px;
+    transform: translateX(-10px);
+  }
+  .search-title {
+    font-size: 23px;
+  }
+  .search-subtitle {
+    font-size: 17px;
+    padding-top: 15px;
+    padding-bottom: 45px;
+  }
+
+  #search-input {
+    width: 80%;
+  }
+
+  /**filter-container*******/
+
+  .filters-container {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .fifil {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12px;
+    transform: translateX(-28px);
+  }
+
+  .test {
+    width: 46px;
+    height: 46px;
+    transform: translateX(26px);
+  }
+
+  .filter-content {
+    font-size: 16px;
+    padding: 12px 12px 12px 32px;
+  }
+
+  .info {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    display: flex;
+  }
+  .info-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+  }
+  .info p {
+    font-size: 16px;
+    padding-top: 15px;
+    line-height: 130%;
+  }
+  .fa-info {
+    padding: 15px;
+  }
+
+  /*****hebergement container*******/
+
+  .hebergements-container {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  /*left*/
+  .heber-left {
+    width: 100%;
+    background: white;
+    border-radius: 0px;
+    order: 2;
+  }
+
+  .hebergement-card {
+    width: 88%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .heber-left h2 {
+    margin-top: 40px;
+    margin-left: 0;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+  .hlc-show-more {
+    font-size: 20px;
+    margin-left: 30px;
+    padding-top: 20px;
+    font-weight: bold;
+  }
+
+  /*right*/
+
+  .heber-right-header {
+    justify-content: space-between;
+    padding: 30px 20px;
+  }
+
+  .heber-right {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .hrc-body h5 {
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+  }
+  .heber-right-card {
+    width: 90%;
+    height: 140px;
+    margin-bottom: 15px;
+  }
+
+  .hrc-body {
+    width: 55%;
+    padding: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hrc-card-body-info {
+    transform: translateY(-20px);
+  }
+
+  /*******************ACTIVITES********************/
+
+  .activites-col-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 22px;
+    height: auto;
+  }
+
+  .left-col,
+  .right-col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .activite-title {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .col-cont,
+  .col-cont2,
+  .aic-img-biggest,
+  .col-cont2bis,
+  .aic-odd {
+    height: 200px;
+  }
+
+  /****************FOOTER************/
+  footer {
+    justify-self: flex-end;
+    overflow-x: hidden;
+
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+  }
+
+  .foot-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer-col {
+    transform: translateX(10px);
+    margin-bottom: 40px;
+  }
+
+  .foot-h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  footer p {
+    font-size: 18px;
+    padding-top: 12px;
+  }
 }
