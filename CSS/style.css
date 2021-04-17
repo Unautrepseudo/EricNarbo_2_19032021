@@ -370,6 +370,7 @@ h5 {
 }
 .hrc-card-body-info {
   transform: translateY(-25px);
+  font-size: 16px;
 }
 
 .hrc-stars-container {
@@ -496,6 +497,8 @@ footer {
 
 .footer-col {
   transform: translateX(60px);
+  display: flex;
+  flex-direction: column;
 }
 
 .foot-h2 {
@@ -504,7 +507,7 @@ footer {
   padding-bottom: 12px;
 }
 
-footer p {
+footer a {
   font-size: 18px;
   padding-top: 15px;
   font-weight: bold;
@@ -529,7 +532,7 @@ footer p {
   }
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1150px) {
   .hebergements-container {
     flex-direction: column;
   }
@@ -551,7 +554,7 @@ footer p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1068px) {
   .fifil {
     width: 100%;
     margin-bottom: 20px;
@@ -617,7 +620,7 @@ footer p {
   }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 700px) {
   /*********HEADER************/
 
   .container {
@@ -866,6 +869,11 @@ footer p {
     height: 200px;
   }
 
+  .aic-odd,
+  .aic-even {
+    width: 89%;
+  }
+
   /****************FOOTER************/
   footer {
     justify-self: flex-end;
@@ -893,7 +901,7 @@ footer p {
     padding-bottom: 10px;
   }
 
-  footer p {
+  footer a {
     font-size: 18px;
     padding-top: 12px;
   }
