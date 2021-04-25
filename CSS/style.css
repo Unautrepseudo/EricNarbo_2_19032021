@@ -5,11 +5,6 @@
 * Browsers: last 4 version
 */
 
-@font-face {
-  font-family: 'Raleway';
-  src: local('/FONTS/Raleway-Bold.ttf') format('ttf');
-}
-
 * {
   outline: none;
   scroll-behavior: smooth;
@@ -280,7 +275,6 @@ li {
   -o-transition: 0.3s;
   transition: 0.3s;
   color: var(--blue);
-  text-shadow: 2px rgba(26, 25, 25, 0.315);
 }
 
 /*****hebergement container*******/
@@ -851,9 +845,12 @@ footer a {
     top: 50px;
     padding: 0;
   }
-
-  .link:hover,
   .inscription:hover {
+    top: 50px;
+    border-top: transparent;
+  }
+
+  .link:hover {
     padding-bottom: 15px;
     border-bottom: 3px solid var(--blue);
     border-top: 0px solid transparent;
