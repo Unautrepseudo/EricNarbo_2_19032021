@@ -985,7 +985,9 @@ footer a {
 
   .hebergement-card {
     width: 88%;
-    margin: auto;
+    max-width: 492px;
+
+    margin: 0 auto;
     margin-bottom: 15px;
   }
 
